@@ -1,0 +1,4 @@
+---
+- name: ping me if you can
+  ping:
+

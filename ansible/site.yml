@@ -1,0 +1,11 @@
+---
+- hosts: nodes
+  become: yes
+  roles:
+    - ping
+
+- hosts: cm
+  become: yes
+  roles:
+    - ping
+    - cm

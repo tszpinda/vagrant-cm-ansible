@@ -1,0 +1,7 @@
+-
+ hosts: all
+ user: root
+ sudo: no
+ tasks:
+ - debug: msg="hello"
+ - get_url: http://archive.cloudera.com/cm5/installer/latest/cloudera-manager-installer.bin

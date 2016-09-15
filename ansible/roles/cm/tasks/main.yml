@@ -1,0 +1,14 @@
+---
+- name: download cloudera manager
+  get_url: 
+    url: http://archive.cloudera.com/cm5/installer/latest/cloudera-manager-installer.bin
+    dest: /opt/
+
+- name: make file executable
+  file: path=/opt/cloudera-manager-installer.bin mode=0755
+
+- name: add cloudera manager repo
+  yum_repository:
+    name: cloudera-manager
+    description: cloudera manager repo
+    baseurl: https://archive.cloudera.com/cm5/redhat/6/x86_64/cm/5/?_ga=1.251768457.1047340631.1468519541
